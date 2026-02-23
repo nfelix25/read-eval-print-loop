@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="REPL" />
+    <meta name="theme-color" content="#1e1e2e" />
+    <title>REPL</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png" />
+    <script type="module" crossorigin src="/read-eval-print-loop/assets/index-Tgl1JfjF.js"></script>
+    <link rel="stylesheet" crossorigin href="/read-eval-print-loop/assets/index-CKlP3yCp.css">
+  <link rel="manifest" href="/read-eval-print-loop/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/read-eval-print-loop/registerSW.js"></script></head>
+  <body>
+    <div id="app">
+      <!-- Toolbar -->
+      <header id="toolbar">
+        <div id="lang-picker" role="tablist" aria-label="Language"></div>
+        <div id="toolbar-right">
+          <button id="btn-reset-db" class="btn-icon hidden" title="Reset database">⟳ DB</button>
+          <button id="btn-snippets" class="btn-icon" title="Snippets">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="8" y1="13" x2="16" y2="13"/>
+              <line x1="8" y1="17" x2="16" y2="17"/>
+            </svg>
+          </button>
+          <button id="btn-run" class="btn-run" title="Run (Ctrl+Enter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+            Run
+          </button>
+        </div>
+      </header>
+
+      <!-- Editor -->
+      <main id="editor-container"></main>
+
+      <!-- Output -->
+      <section id="output-panel">
+        <div id="output-header">
+          <span id="output-label">Output</span>
+          <button id="btn-clear-output" class="btn-text">Clear</button>
+        </div>
+        <div id="output-content" aria-live="polite" aria-label="Execution output"></div>
+      </section>
+
+      <!-- Snippets drawer -->
+      <div id="drawer-overlay"></div>
+      <aside id="snippets-drawer" aria-label="Snippets">
+        <div id="drawer-handle"></div>
+        <div id="snippets-header">
+          <span>Snippets</span>
+          <div id="snippets-header-actions">
+            <button id="btn-save-snippet" class="btn-text">Save current</button>
+            <button id="btn-close-snippets" class="btn-icon" aria-label="Close">✕</button>
+          </div>
+        </div>
+        <div id="snippets-list"></div>
+        <div id="drawer-footer">
+          <button id="btn-manage-key" class="btn-text">⚙ Piston URL</button>
+        </div>
+      </aside>
+    </div>
+
+  </body>
+</html>
