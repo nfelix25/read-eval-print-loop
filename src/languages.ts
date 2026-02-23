@@ -4,7 +4,6 @@ export const LANGUAGE_ORDER: Language[] = [
   "javascript",
   "typescript",
   "python",
-  // 'sql',
   "rust",
   "c",
   "cpp",
@@ -33,12 +32,6 @@ export const LANGUAGES: Record<Language, LanguageConfig> = {
     filename: "main.py",
     sampleCode: `# Python\ndef fib(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n\nprint([fib(i) for i in range(10)])`,
   },
-
-  // sql: {
-  //   label: 'SQL',
-  //   execution: 'sql',
-  //   sampleCode: `-- SQLite (in-memory, persists across runs this session)\nCREATE TABLE IF NOT EXISTS users (\n  id   INTEGER PRIMARY KEY,\n  name TEXT,\n  age  INTEGER\n);\n\nINSERT INTO users (name, age)\n  VALUES ('Alice', 30), ('Bob', 25)\n  ON CONFLICT DO NOTHING;\n\nSELECT * FROM users ORDER BY age;`,
-  // },
 
   rust: {
     label: "RS",

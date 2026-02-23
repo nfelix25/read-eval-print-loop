@@ -1,16 +1,15 @@
 export type Language =
-  | 'javascript'
-  | 'typescript'
-  | 'python'
-  | 'sql'
-  | 'rust'
-  | 'c'
-  | 'cpp'
-  | 'zig';
+  | "javascript"
+  | "typescript"
+  | "python"
+  | "rust"
+  | "c"
+  | "cpp"
+  | "zig";
 
 export interface LanguageConfig {
   label: string;
-  execution: 'js' | 'sql' | 'piston' | 'none';
+  execution: "js" | "piston" | "none";
   pistonId?: string;
   filename?: string;
   sampleCode: string;
