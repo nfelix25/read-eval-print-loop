@@ -6,7 +6,7 @@ import {
   getEditorContent,
   setEditorContent,
 } from "./editor";
-import { execute, resetDb } from "./execution/index";
+import { execute } from "./execution/index";
 import {
   getProxyUrl,
   setProxyUrl,
